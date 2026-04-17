@@ -42,8 +42,8 @@ body {
   padding: 8px;
   border-radius: 4px;
   border: none;
+  font-size: 19px;
 }
-
 .nav-links {
   display: flex;
   gap: 20px;
@@ -52,7 +52,7 @@ body {
 .nav-links a {
   color: white;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 19px;
 }
 
 .nav-links a:hover {
@@ -118,19 +118,11 @@ p {
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .slider {
-    aspect-ratio: 16 / 8;
-  }
 }
 
 @media (max-width: 576px) {
   .product-grid {
     grid-template-columns: 1fr;
-  }
-
-  .slider {
-    aspect-ratio: 16 / 9;
   }
 
   .deals {
@@ -167,6 +159,7 @@ p {
   text-align: center;
   border-radius: 5px;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .product-card img {
@@ -234,6 +227,11 @@ p {
   margin: 15px 0;
   text-align: start;
 }
+ @media  (max-width: 768px){
+   .left p {text-align: center;
+   }
+  }
+
 footer{
   display: flex;
   flex-wrap: wrap;
