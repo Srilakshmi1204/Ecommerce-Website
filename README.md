@@ -24,7 +24,7 @@ This is a responsive ecommerce website built using HTML, CSS, and JavaScript.
 
 ## 🌐 Live Demo
 
-https://srilakshmi1204.github.io/Ecommerce-Website/shopify.html
+https://srilakshmi1204.github.io/Ecommerce-Website
 
 ## 📌 Author
 
