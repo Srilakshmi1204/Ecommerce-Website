@@ -40,36 +40,40 @@
       <img src="images/banner1.jpg" alt="shopping">
     </div>
   </section>
+  <div class="search-results">
+    <div class="searchproducts" id="productList"></div>
+    <p id="noResults" style="display:none;">No products found</p>
+  </div>
   <section class="deals">
     <h1 class="title">Continue Shopping Deals</h1>
     <p> Shop exclusive summer collection</p>
 
     <div class="product-grid">
       <div class="product">
-        <img src="images/western.jpg">
+        <img src="images/western.jpg" onclick="goToProduct('western')">
         <p class="desc product-name">Comfortable Summer Beach Theme Shirt</p>
         <p>₹799</p>
         <p class="price">Buy</p>
       </div>
       <div class="product">
-        <img src="images/f2.jpg">
+        <img src="images/f2.jpg" onclick="goToProduct('dualshirt')">
         <p class="desc product-name">Premium Dual Shade Shirt Full Sleeves</p>
         <p>₹999</p>
         <p class="price">Buy</p>
       </div>
-      <div class="product">
+      <div class="product" onclick="goToProduct('westerntop')">
         <img src="images/f3.jpg">
         <p class="desc product-name">Floral Print Classic and Stylish Western Top</p>
         <p>₹649</p>
         <p class="price">Buy</p>
       </div>
-      <div class="product">
+      <div class="product" onclick="goToProduct('pants')">
         <img src="images/f4.jpg">
         <p class="desc product-name">Floral Embroidery Stylish Cotton Pants </p>
         <p>₹449</p>
         <p class="price">Buy</p>
       </div>
-      <p id="noResults" style="display:none; color: red;">No Results Found</p>
+      
     </div>
   </section>
   <footer class="section-p1">
@@ -124,35 +128,45 @@
       <p>© 2026 Shopify - HTML CSS Ecommerce Template</p>
     </div>
   </footer>
-  <script>
-    const searchInput = document.getElementById("searchBar");
-    const searchBtn = document.getElementById("searchBtn");
-    const products = document.querySelectorAll(".product");
-    const noResults = document.getElementById("noResults");
+  <script src="product.js"></script>
 
-    function performSearch() {
-      let searchValue = searchInput.value.toLowerCase();
-      let visibleCount = 0;
-      if (searchValue === "") {
-        products.forEach(p => p.style.display = "block");
-        noResults.style.display = "none";
-        return;
-      }
-      products.forEach(function (product) {
-        let name = product.querySelector(".product-name").innerText.toLowerCase();
+<script>
+const searchInput = document.getElementById("searchBar");
+const searchBtn = document.getElementById("searchBtn");
+const container = document.getElementById("productList"); // create this div
+const noResults = document.getElementById("noResults");
 
-        if (name.includes(searchValue)) {
-          product.style.display = "block";
-          visibleCount++;
-        } else {
-          product.style.display = "none";
-        }
-      });
+function performSearch() {
+  let searchValue = searchInput.value.toLowerCase();
+  container.innerHTML = "";
+  let visibleCount = 0;
 
-      noResults.style.display = visibleCount === 0 ? "block" : "none";
-    };
-    searchBtn.addEventListener("click", performSearch);
-  </script>
+  Object.keys(products).forEach(key => {
+    const p = products[key];
+
+    if (p.name.toLowerCase().includes(searchValue)) {
+      container.innerHTML += `
+        <div class="product-card" onclick="goToProduct('${key}')">
+          <img src="${p.img}">
+          <p>${p.desc}</p>
+          <p>${p.price}</p>
+          <p>${p.rating}</p>
+        </div>
+      `;
+      visibleCount++;
+    }
+  });
+
+  noResults.style.display = visibleCount === 0 ? "block" : "none";
+}
+
+function goToProduct(product) {
+  window.location.href = "product.html?item=" + product;
+}
+
+searchBtn.addEventListener("click", performSearch);
+
+</script>
 </body>
 
 </html>
