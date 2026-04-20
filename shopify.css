@@ -23,7 +23,7 @@ body {
   }
 
   .navbar input {
-    width: 100%;
+    width: 100%; 
   }
 
   .nav-links {
@@ -201,7 +201,7 @@ p {
 .right img {
   max-width: 100%;
   height: auto;
-  object-fit: contain; /* IMPORTANT: no zoom */
+  object-fit: contain; 
 }
 
 .btn {
@@ -302,7 +302,7 @@ footer .copyright {
 }
 @media (max-width: 768px) {
   #main {
-    flex-direction: column; /* stack vertically */
+    flex-direction: column; 
     text-align: center;
     padding: 20px;
     height: auto;
@@ -320,7 +320,7 @@ footer .copyright {
 
   .right img {
     width: 100%;
-    max-width: 300px; /* prevents oversized image */
+    max-width: 300px; 
   }
 
   .left h2 {
