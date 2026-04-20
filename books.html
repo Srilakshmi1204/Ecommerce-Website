@@ -1,64 +1,154 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Books</title>
   <link rel="stylesheet" href="shopify.css">
 </head>
+
 <body>
-
-<h1 class="title">Books</h1>
-
-<div class="products">
-
-  <div class="product-card">
-    <img src="images/fullstack.png">
-    <p class="desc"><b>Learn Full Stack Web Development with HTML, CSS, JavaScript and real-world projects</b></p>
-    <p class="price">₹499</p>
+  <div class="home-container">
+    <button onclick="goHome()" class="home-btn">← Home</button>
   </div>
+  <h1 class="title">Popular Books</h1>
 
-  <div class="product-card">
-    <img src="images/science.jpg">
-    <p class="desc"><b>Advanced Science textbook covering physics, chemistry and modern experiments</b></p>
-    <p class="price">₹399</p>
+  <div class="products">
+
+    <div class="product-card" onclick="goToProduct('fullstack')">
+      <div class="img-box">
+        <img src="images/fullstack.png">
+        <span class="discount">20% OFF</span>
+      </div>
+      <p class="desc">Learn Full Stack Web Development with HTML, CSS, JavaScript and real-world projects</p>
+      <p class="rating">⭐ 4.6 | 12,500 ratings</p>
+      <p>
+        <del>₹499</del>
+        <span class="final">₹399</span>
+      </p>
+      <p class="save">You save ₹100</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('science')">
+      <div class="img-box">
+        <img src="images/science.jpg">
+        <span class="discount">15% OFF</span>
+      </div>
+      <p class="desc">Advanced Science textbook covering physics, chemistry and modern experiments</p>
+      <p class="rating">⭐ 4.5 | 9,800 ratings</p>
+      <p>
+        <del>₹399</del>
+        <span class="final">₹339</span>
+      </p>
+      <p class="save">You save ₹60</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('math')">
+      <div class="img-box">
+        <img src="images/math.jpg">
+        <span class="discount">10% OFF</span>
+      </div>
+      <p class="desc">Complete Mathematics guide for students with solved examples and practice problems</p>
+      <p class="rating">⭐ 4.4 | 11,200 ratings</p>
+      <p>
+        <del>₹299</del>
+        <span class="final">₹269</span>
+      </p>
+      <p class="save">You save ₹30</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('business')">
+      <div class="img-box">
+        <img src="images/business.jpg">
+        <span class="discount">17% OFF</span>
+      </div>
+      <p class="desc">Learn business strategies, startup ideas and entrepreneurship skills for success</p>
+      <p class="rating">⭐ 4.7 | 14,300 ratings</p>
+      <p>
+        <del>₹599</del>
+        <span class="final">₹499</span>
+      </p>
+      <p class="save">You save ₹100</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('fiction')">
+      <div class="img-box">
+        <img src="images/fiction.jpg">
+        <span class="discount">20% OFF</span>
+      </div>
+      <p class="desc">Engaging fiction novel full of adventure, mystery and emotional storytelling</p>
+      <p class="rating">⭐ 4.3 | 8,900 ratings</p>
+      <p>
+        <del>₹249</del>
+        <span class="final">₹199</span>
+      </p>
+      <p class="save">You save ₹50</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('selfhelp')">
+      <div class="img-box">
+        <img src="images/self-help.jpg">
+        <span class="discount">15% OFF</span>
+      </div>
+      <p class="desc">Self-improvement book to build confidence, habits and personal growth mindset</p>
+      <p class="rating">⭐ 4.6 | 10,500 ratings</p>
+      <p>
+        <del>₹349</del>
+        <span class="final">₹299</span>
+      </p>
+      <p class="save">You save ₹50</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('ssc')">
+      <div class="img-box">
+        <img src="images/ssc.jpg">
+        <span class="discount">10% OFF</span>
+      </div>
+      <p class="desc">Competitive exam preparation guide for SSC, banking and government exams</p>
+      <p class="rating">⭐ 4.5 | 13,600 ratings</p>
+      <p>
+        <del>₹699</del>
+        <span class="final">₹629</span>
+      </p>
+      <p class="save">You save ₹70</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('history')">
+      <div class="img-box">
+        <img src="images/history.jpg">
+        <span class="discount">15% OFF</span>
+      </div>
+      <p class="desc">World history book covering ancient civilizations and modern historical events</p>
+      <p class="rating">⭐ 4.4 | 9,300 ratings</p>
+      <p>
+        <del>₹399</del>
+        <span class="final">₹339</span>
+      </p>
+      <p class="save">You save ₹60</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
   </div>
-
-  <div class="product-card">
-    <img src="images/math.jpg">
-    <p class="desc"><b>Complete Mathematics guide for students with solved examples and practice problems</b></p>
-    <p class="price">₹299</p>
-  </div>
-
-  <div class="product-card">
-    <img src="images/business.jpg">
-    <p class="desc"><b>Learn business strategies, startup ideas and entrepreneurship skills for success</b></p>
-    <p class="price">₹599</p>
-  </div>
-
-  <div class="product-card">
-    <img src="images/fiction.jpg">
-    <p class="desc"><b>Engaging fiction novel full of adventure, mystery and emotional storytelling</b></p>
-    <p class="price">₹249</p>
-  </div>
-
-  <div class="product-card">
-    <img src="images/self-help.jpg">
-    <p class="desc"><b>Self-improvement book to build confidence, habits and personal growth mindset</b></p>
-    <p class="price">₹349</p>
-  </div>
-
-  <div class="product-card">
-    <img src="images/ssc.jpg">
-    <p class="desc"><b>Competitive exam preparation guide for SSC, banking and government exams</b></p>
-    <p class="price">₹699</p>
-  </div>
-
-  <div class="product-card">
-    <img src="images/history.jpg">
-    <p class="desc"><b>World history book covering ancient civilizations and modern historical events</b></p>
-    <p class="price">₹399</p>
-  </div>
-
-</div>
-
+  <script>function goToProduct(product) {
+      window.location.href = "product.html?item=" + product;
+    }
+    function goHome() {
+      window.location.href = "index.html"
+    }</script>
 </body>
+
 </html>

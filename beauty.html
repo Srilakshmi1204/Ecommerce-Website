@@ -1,64 +1,156 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Beauty Products</title>
   <link rel="stylesheet" href="shopify.css">
 </head>
+
 <body>
-
-<h1 class="title">Beauty</h1>
-
-<div class="products">
-
-  <div class="product-card">
-    <img src="images/lipstick.jpg">
-    <p class="desc"><b>Long-Lasting Matte Lipstick with Smooth Finish</b></p>
-    <p class="price">₹499</p>
+  <div class="home-container">
+    <button onclick="goHome()" class="home-btn">← Home</button>
   </div>
+  <h1 class="title">Beauty</h1>
 
-  <div class="product-card">
-    <img src="images/face-cream.jpg">
-    <p class="desc"><b>Hydrating Face Cream for Glowing Skin</b></p>
-    <p class="price">₹799</p>
+  <div class="products">
+
+    <div class="product-card" onclick="goToProduct('lipstick')">
+      <div class="img-box">
+        <img src="images/lipstick.jpg">
+        <span class="discount">20% OFF</span>
+      </div>
+      <p class="desc">Long-Lasting Matte Lipstick with Smooth Finish</p>
+      <p class="rating">⭐ 4.5 | 14,200 ratings</p>
+      <p>
+        <del>₹499</del>
+        <span class="final">₹399</span>
+      </p>
+      <p class="save">You save ₹100</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('facecream')">
+      <div class="img-box">
+        <img src="images/face-cream.jpg">
+        <span class="discount">15% OFF</span>
+      </div>
+      <p class="desc">Hydrating Face Cream for Glowing Skin</p>
+      <p class="rating">⭐ 4.4 | 10,800 ratings</p>
+      <p>
+        <del>₹799</del>
+        <span class="final">₹679</span>
+      </p>
+      <p class="save">You save ₹120</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('facewash')">
+      <div class="img-box">
+        <img src="images/face-wash.jpg">
+        <span class="discount">10% OFF</span>
+      </div>
+      <p class="desc">Deep cleansing face wash removes dirt and oil for fresh skin</p>
+      <p class="rating">⭐ 4.3 | 12,500 ratings</p>
+      <p>
+        <del>₹299</del>
+        <span class="final">₹269</span>
+      </p>
+      <p class="save">You save ₹30</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('nailpolish')">
+      <div class="img-box">
+        <img src="images/nail-polish.jpg">
+        <span class="discount">15% OFF</span>
+      </div>
+      <p class="desc">Quick-dry nail polish with glossy finish and long-lasting shine</p>
+      <p class="rating">⭐ 4.2 | 9,300 ratings</p>
+      <p>
+        <del>₹199</del>
+        <span class="final">₹169</span>
+      </p>
+      <p class="save">You save ₹30</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('shampoo')">
+      <div class="img-box">
+        <img src="images/shampoo.jpg">
+        <span class="discount">15% OFF</span>
+      </div>
+      <p class="desc">Herbal shampoo for strong, smooth and dandruff-free hair</p>
+      <p class="rating">⭐ 4.4 | 11,600 ratings</p>
+      <p>
+        <del>₹349</del>
+        <span class="final">₹299</span>
+      </p>
+      <p class="save">You save ₹50</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('facemask')">
+      <div class="img-box">
+        <img src="images/face-mask.jpg">
+        <span class="discount">20% OFF</span>
+      </div>
+      <p class="desc">Natural clay face mask for deep pore cleansing and glowing skin</p>
+      <p class="rating">⭐ 4.5 | 8,900 ratings</p>
+      <p>
+        <del>₹399</del>
+        <span class="final">₹319</span>
+      </p>
+      <p class="save">You save ₹80</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('perfume')">
+      <div class="img-box">
+        <img src="images/perfume.jpg">
+        <span class="discount">10% OFF</span>
+      </div>
+      <p class="desc">Premium long-lasting floral fragrance perfume for daily use</p>
+      <p class="rating">⭐ 4.6 | 15,200 ratings</p>
+      <p>
+        <del>₹999</del>
+        <span class="final">₹899</span>
+      </p>
+      <p class="save">You save ₹100</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('kajal')">
+      <div class="img-box">
+        <img src="images/kajal.jpg">
+        <span class="discount">10% OFF</span>
+      </div>
+      <p class="desc">Smudge-proof kajal for bold eye makeup that lasts all day</p>
+      <p class="rating">⭐ 4.3 | 13,400 ratings</p>
+      <p>
+        <del>₹199</del>
+        <span class="final">₹179</span>
+      </p>
+      <p class="save">You save ₹20</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
   </div>
-
-  <div class="product-card">
-    <img src="images/face-wash.jpg">
-    <p class="desc"><b>Deep cleansing face wash removes dirt and oil for fresh and clean skin</b></p>
-    <p class="price">₹299</p>
-  </div>
-
-  <div class="product-card">
-    <img src="images/nail-polish.jpg">
-    <p class="desc"><b>Quick-dry nail polish with glossy finish and long-lasting shine</b></p>
-    <p class="price">₹199</p>
-  </div>
-
-  <div class="product-card">
-    <img src="images/shampoo.jpg">
-    <p class="desc"><b>Herbal shampoo for strong, smooth and dandruff-free healthy hair</b></p>
-    <p class="price">₹349</p>
-  </div>
-
-  <div class="product-card">
-    <img src="images/face-mask.jpg">
-    <p class="desc"><b>Natural clay face mask for deep pore cleansing and glowing skin</b></p>
-    <p class="price">₹399</p>
-  </div>
-
-  <div class="product-card">
-    <img src="images/perfume.jpg">
-    <p class="desc"><b>Premium long-lasting perfume with fresh floral fragrance for daily use</b></p>
-    <p class="price">₹999</p>
-  </div>
-
-  <div class="product-card">
-    <img src="images/kajal.jpg">
-    <p class="desc"><b>Smudge-proof kajal for bold and beautiful eye makeup that lasts all day</b></p>
-    <p class="price">₹199</p>
-  </div>
-
-</div>
-
+  <script>
+    function goToProduct(product) {
+      window.location.href = "product.html?item=" + product;
+    }
+    function goHome() {
+      window.location.href = "index.html"
+    }
+  </script>
 </body>
+
 </html>

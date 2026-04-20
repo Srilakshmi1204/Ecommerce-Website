@@ -1,63 +1,154 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Home Appliances</title>
   <link rel="stylesheet" href="shopify.css">
 </head>
+
 <body>
-
-<h1 class="title">Home</h1>
-
-<div class="products">
-
-  <div class="product-card">
-    <img src="images/bed.jpg">
-    <p class="desc"><b>King Size Wooden Bed with Premium Finish</b></p>
-    <p class="price">₹18,999</p>
+  <div class="home-container">
+    <button onclick="goHome()" class="home-btn">← Home</button>
   </div>
+  <h1 class="title">Home</h1>
 
-  <div class="product-card">
-    <img src="images/sofa.jpg">
-    <p class="desc"><b>Luxury L-Shaped Sofa Set with Soft Cushioning</b></p>
-    <p class="price">₹24,999</p>
+  <div class="products">
+
+    <div class="product-card" onclick="goToProduct('bed')">
+      <div class="img-box">
+        <img src="images/bed.jpg">
+        <span class="discount">15% OFF</span>
+      </div>
+      <p class="desc">King Size Wooden Bed with Premium Finish</p>
+      <p class="rating">⭐ 4.5 | 6,800 ratings</p>
+      <p>
+        <del>₹18,999</del>
+        <span class="final">₹16,149</span>
+      </p>
+      <p class="save">You save ₹2,850</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('sofa')">
+      <div class="img-box">
+        <img src="images/sofa.jpg">
+        <span class="discount">20% OFF</span>
+      </div>
+      <p class="desc">Luxury L-Shaped Sofa Set with Soft Cushioning</p>
+      <p class="rating">⭐ 4.6 | 9,200 ratings</p>
+      <p>
+        <del>₹24,999</del>
+        <span class="final">₹19,999</span>
+      </p>
+      <p class="save">You save ₹5,000</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('coat')">
+      <div class="img-box">
+        <img src="images/coat.jpg">
+        <span class="discount">12% OFF</span>
+      </div>
+      <p class="desc">Winter Wool Coat for Men and Women</p>
+      <p class="rating">⭐ 4.3 | 5,400 ratings</p>
+      <p>
+        <del>₹2,499</del>
+        <span class="final">₹2,199</span>
+      </p>
+      <p class="save">You save ₹300</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('kitchenset')">
+      <div class="img-box">
+        <img src="images/kitchen-set.jpg">
+        <span class="discount">15% OFF</span>
+      </div>
+      <p class="desc">Premium Cookware Set for Every Kitchen</p>
+      <p class="rating">⭐ 4.4 | 7,100 ratings</p>
+      <p>
+        <del>₹3,999</del>
+        <span class="final">₹3,399</span>
+      </p>
+      <p class="save">You save ₹600</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('vacuum')">
+      <div class="img-box">
+        <img src="images/vaccum.jpg">
+        <span class="discount">18% OFF</span>
+      </div>
+      <p class="desc">High Power Vacuum Cleaner with Strong Suction</p>
+      <p class="rating">⭐ 4.2 | 4,900 ratings</p>
+      <p>
+        <del>₹5,499</del>
+        <span class="final">₹4,509</span>
+      </p>
+      <p class="save">You save ₹990</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('chair')">
+      <div class="img-box">
+        <img src="images/chair.jpg">
+        <span class="discount">10% OFF</span>
+      </div>
+      <p class="desc">Ergonomic Study Chair with Adjustable Height</p>
+      <p class="rating">⭐ 4.3 | 6,300 ratings</p>
+      <p>
+        <del>₹1,999</del>
+        <span class="final">₹1,799</span>
+      </p>
+      <p class="save">You save ₹200</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('storagebox')">
+      <div class="img-box">
+        <img src="images/storage-box.jpg">
+        <span class="discount">20% OFF</span>
+      </div>
+      <p class="desc">Multipurpose Storage Boxes for Home Organization</p>
+      <p class="rating">⭐ 4.1 | 3,800 ratings</p>
+      <p>
+        <del>₹899</del>
+        <span class="final">₹719</span>
+      </p>
+      <p class="save">You save ₹180</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('lamp')">
+      <div class="img-box">
+        <img src="images/lamp.jpg">
+        <span class="discount">14% OFF</span>
+      </div>
+      <p class="desc">Modern LED Table Lamp with Adjustable Brightness</p>
+      <p class="rating">⭐ 4.2 | 5,100 ratings</p>
+      <p>
+        <del>₹699</del>
+        <span class="final">₹601</span>
+      </p>
+      <p class="save">You save ₹98</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
   </div>
-
-  <div class="product-card">
-    <img src="images/coat.jpg">
-    <p class="desc"><b>Winter Wool Coat for Men and Women</b></p>
-    <p class="price">₹2,499</p>
-  </div>
-
-  <div class="product-card">
-    <img src="images/kitchen-set.jpg">
-    <p class="desc"><b>Premium CookWare Set for Every Kitchen</b></p>
-    <p class="price">₹3,999</p>
-  </div>
-
-  <div class="product-card">
-    <img src="images/vaccum.jpg">
-    <p class="desc"><b>High Power Vacuum Cleaner with Strong Suction</b></p>
-    <p class="price">₹5,499</p>
-  </div>
-
-  <div class="product-card">
-    <img src="images/chair.jpg">
-    <p class="desc"><b>Ergonomic Study Chair with Adjustable Height</b></p>
-    <p class="price">₹1,999</p>
-  </div>
-
-  <div class="product-card">
-    <img src="images/storage-box.jpg">
-    <p class="desc"><b>Multipurpose Storage Boxes for Home Organization</b></p>
-    <p class="price">₹899</p>
-  </div>
-
-  <div class="product-card">
-    <img src="images/lamp.jpg">
-    <p class="desc"><b>Modern LED Table Lamp with Adjustable Brightness</b></p>
-    <p class="price">₹699</p>
-  </div>
-</div>
-
+  <script>function goToProduct(product) {
+      window.location.href = "product.html?item=" + product;
+    }
+    function goHome() {
+      window.location.href = "index.html"
+    }</script>
 </body>
+
 </html>

@@ -1,71 +1,156 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Sports Products</title>
   <link rel="stylesheet" href="shopify.css">
 </head>
+
 <body>
-
-<h1 class="title">Sports</h1>
-
-<div class="products">
-
-
-  <div class="product-card">
-    <img src="images/cricket-bat.jpg">
-    <p class="desc"><b>Premium Kashmir Willow Cricket Bat with strong grip and balanced weight for professional play</b></p>
-    <p class="price">₹1,999</p>
+  <div class="home-container">
+    <button onclick="goHome()" class="home-btn">← Home</button>
   </div>
+  <h1 class="title">Sports</h1>
 
+  <div class="products">
 
-  <div class="product-card">
-    <img src="images/football.jpg">
-    <p class="desc"><b>Durable football for outdoor and indoor play with high-quality stitching and grip</b></p>
-    <p class="price">₹799</p>
+    <div class="product-card" onclick="goToProduct('cricketbat')">
+      <div class="img-box">
+        <img src="images/cricket-bat.jpg">
+        <span class="discount">15% OFF</span>
+      </div>
+      <p class="desc">Premium Kashmir Willow Cricket Bat with strong grip and balanced weight</p>
+      <p class="rating">⭐ 4.5 | 12,300 ratings</p>
+      <p>
+        <del>₹1,999</del>
+        <span class="final">₹1,699</span>
+      </p>
+      <p class="save">You save ₹300</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('football')">
+      <div class="img-box">
+        <img src="images/football.jpg">
+        <span class="discount">10% OFF</span>
+      </div>
+      <p class="desc">Durable football for outdoor and indoor play with high-quality stitching</p>
+      <p class="rating">⭐ 4.3 | 9,800 ratings</p>
+      <p>
+        <del>₹799</del>
+        <span class="final">₹719</span>
+      </p>
+      <p class="save">You save ₹80</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('racket')">
+      <div class="img-box">
+        <img src="images/racket.jpg">
+        <span class="discount">12% OFF</span>
+      </div>
+      <p class="desc">Lightweight badminton racket for beginners and professionals</p>
+      <p class="rating">⭐ 4.4 | 10,500 ratings</p>
+      <p>
+        <del>₹999</del>
+        <span class="final">₹879</span>
+      </p>
+      <p class="save">You save ₹120</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('basketball')">
+      <div class="img-box">
+        <img src="images/ball.jpg">
+        <span class="discount">10% OFF</span>
+      </div>
+      <p class="desc">High grip basketball suitable for indoor and outdoor courts</p>
+      <p class="rating">⭐ 4.2 | 7,900 ratings</p>
+      <p>
+        <del>₹899</del>
+        <span class="final">₹809</span>
+      </p>
+      <p class="save">You save ₹90</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('dumbbells')">
+      <div class="img-box">
+        <img src="images/dumbbells.jpg">
+        <span class="discount">15% OFF</span>
+      </div>
+      <p class="desc">Adjustable dumbbells set for home workouts and strength training</p>
+      <p class="rating">⭐ 4.6 | 11,200 ratings</p>
+      <p>
+        <del>₹1,499</del>
+        <span class="final">₹1,274</span>
+      </p>
+      <p class="save">You save ₹225</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('helmet')">
+      <div class="img-box">
+        <img src="images/helmet.jpg">
+        <span class="discount">10% OFF</span>
+      </div>
+      <p class="desc">Safety cycling helmet with shock absorption and adjustable strap</p>
+      <p class="rating">⭐ 4.3 | 6,500 ratings</p>
+      <p>
+        <del>₹699</del>
+        <span class="final">₹629</span>
+      </p>
+      <p class="save">You save ₹70</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('tabletennis')">
+      <div class="img-box">
+        <img src="images/tabletennis.jpg">
+        <span class="discount">20% OFF</span>
+      </div>
+      <p class="desc">Complete table tennis set with paddles and balls</p>
+      <p class="rating">⭐ 4.1 | 5,300 ratings</p>
+      <p>
+        <del>₹499</del>
+        <span class="final">₹399</span>
+      </p>
+      <p class="save">You save ₹100</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('boxing')">
+      <div class="img-box">
+        <img src="images/boxing.jpg">
+        <span class="discount">15% OFF</span>
+      </div>
+      <p class="desc">Professional boxing gloves with strong padding for training</p>
+      <p class="rating">⭐ 4.5 | 8,200 ratings</p>
+      <p>
+        <del>₹1,299</del>
+        <span class="final">₹1,104</span>
+      </p>
+      <p class="save">You save ₹195</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
   </div>
-
-
-  <div class="product-card">
-    <img src="images/racket.jpg">
-    <p class="desc"><b>Lightweight badminton racket for beginners and professionals with strong string tension</b></p>
-    <p class="price">₹999</p>
-  </div>
-
-
-  <div class="product-card">
-    <img src="images/ball.jpg">
-    <p class="desc"><b>High grip basketball suitable for indoor and outdoor courts with durable rubber material</b></p>
-    <p class="price">₹899</p>
-  </div>
-
- 
-  <div class="product-card">
-    <img src="images/dumbbells.jpg">
-    <p class="desc"><b>Adjustable dumbbells set for home workouts and strength training exercises</b></p>
-    <p class="price">₹1,499</p>
-  </div>
-
-  
-  <div class="product-card">
-    <img src="images/helmet.jpg">
-    <p class="desc"><b>Safety cycling helmet with shock absorption and adjustable strap for secure fit</b></p>
-    <p class="price">₹699</p>
-  </div>
-
-  <div class="product-card">
-    <img src="images/tabletennis.jpg">
-    <p class="desc"><b>Complete table tennis set with paddles and balls for indoor recreation</b></p>
-    <p class="price">₹499</p>
-  </div>
-
- 
-  <div class="product-card">
-    <img src="images/boxing.jpg">
-    <p class="desc"><b>Professional boxing gloves with strong padding for training and sparring sessions</b></p>
-    <p class="price">₹1,299</p>
-  </div>
-
-</div>
-
+  <script>
+    function goToProduct(product) {
+      window.location.href = "product.html?item=" + product;
+    }
+    function goHome() {
+      window.location.href = "index.html"
+    }
+  </script>
 </body>
+
 </html>

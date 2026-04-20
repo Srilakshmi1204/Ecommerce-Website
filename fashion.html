@@ -1,81 +1,184 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Fashion</title>
+  <title>Fashion Products</title>
   <link rel="stylesheet" href="shopify.css">
 </head>
+
 <body>
-<h1 class="title">Fashion</h1>
-
-<div class="products">
-  <div class="product-card">
-    <img src="images/tshirt.jpg">
-    <p class="desc"><b>Men's Cotton Rich Solid Polo Tshirt</b></p>
-    <p><del>₹999</del> ₹890</p>
-    <button class="price">Buy Now</button>
+  <div class="home-container">
+    <button onclick="goHome()" class="home-btn">← Home</button>
   </div>
+  <h1 class="title">Fashion</h1>
+  <div class="products">
+    <div class="product-card" onclick="goToProduct('tshirt')">
+      <div class="img-box">
+        <img src="images/tshirt.jpg">
+        <span class="discount">11% OFF</span>
+      </div>
+      <p class="desc">Men's Cotton Rich Solid Polo Tshirt</p>
+      <p class="rating">⭐ 4.3 | 15,200 ratings</p>
+      <p>
+        <del>₹999</del>
+        <span class="final">₹890</span>
+      </p>
+      <p class="save">You save ₹109</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
 
-   <div class="product-card">
-    <img src="images/men-jeans.jpg">
-    <p class="desc"><b>Men Regular Fit Denim Jeans</b></p>
-    <p><del>₹1,999</del> ₹1,790</p>
-    <button class="price">Buy Now</button>
-  </div>
+    <div class="product-card" onclick="goToProduct('jeans')">
+      <div class="img-box">
+        <img src="images/men-jeans.jpg">
+        <span class="discount">10% OFF</span>
+      </div>
+      <p class="desc">Men Regular Fit Denim Jeans</p>
+      <p class="rating">⭐ 4.4 | 10,450 ratings</p>
+      <p>
+        <del>₹1,999</del>
+        <span class="final">₹1,790</span>
+      </p>
+      <p class="save">You save ₹209</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
 
-  <div class="product-card">
-    <img src="images/men-shoes.jpg">
-    <p class="desc"><b>Men Sports Running Shoes</b></p>
-    <p><del>₹1599</del> ₹1490</p>
-    <button class="price">Buy Now</button>
-  </div>
+    <div class="product-card" onclick="goToProduct('shoes')">
+      <div class="img-box">
+        <img src="images/men-shoes.jpg">
+        <span class="discount">7% OFF</span>
+      </div>
+      <p class="desc">Men Sports Running Shoes</p>
+      <p class="rating">⭐ 4.2 | 9,800 ratings</p>
+      <p>
+        <del>₹1,599</del>
+        <span class="final">₹1,490</span>
+      </p>
+      <p class="save">You save ₹109</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
 
-  <div class="product-card">
-    <img src="images/men-jacket.jpg">
-    <p class="desc"><b>Men Winter Jacket</b></p>
-    <p><del>₹2549</del> ₹2299</p>
-    <button class="price">Buy Now</button>
-  </div>
+    <div class="product-card" onclick="goToProduct('jacket')">
+      <div class="img-box">
+        <img src="images/men-jacket.jpg">
+        <span class="discount">10% OFF</span>
+      </div>
+      <p class="desc">Men Winter Jacket</p>
+      <p class="rating">⭐ 4.5 | 12,300 ratings</p>
+      <p>
+        <del>₹2,549</del>
+        <span class="final">₹2,299</span>
+      </p>
+      <p class="save">You save ₹250</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
 
-  <div class="product-card">
-    <img src="images/women-kurti.jpg">
-    <p class="desc"><b>Women Cotton Printed Kurti</b></p>
-    <p><del>₹699</del> ₹499</p>
-    <button class="price">Buy Now</button>
-  </div>
+    <div class="product-card" onclick="goToProduct('kurti')">
+      <div class="img-box">
+        <img src="images/women-kurti.jpg">
+        <span class="discount">29% OFF</span>
+      </div>
+      <p class="desc">Women Cotton Printed Kurti</p>
+      <p class="rating">⭐ 4.3 | 18,900 ratings</p>
+      <p>
+        <del>₹699</del>
+        <span class="final">₹499</span>
+      </p>
+      <p class="save">You save ₹200</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
 
-  <div class="product-card">
-    <img src="images/women-saree.jpg">
-    <p class="desc"><b>Women Silk Saree</b></p>
-    <p><del>₹1299</del> ₹899</p>
-    <button class="price">Buy Now</button>
-  </div>
+    <div class="product-card" onclick="goToProduct('saree')">
+      <div class="img-box">
+        <img src="images/women-saree.jpg">
+        <span class="discount">31% OFF</span>
+      </div>
+      <p class="desc">Women Silk Saree</p>
+      <p class="rating">⭐ 4.6 | 22,100 ratings</p>
+      <p>
+        <del>₹1,299</del>
+        <span class="final">₹899</span>
+      </p>
+      <p class="save">You save ₹400</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
 
-  <div class="product-card">
-    <img src="images/western.jpg">
-    <p class="desc"><b>Summer Collection for Men</b></p>
-    <p><del>₹999</del> ₹899</p>
-    <button class="price">Buy Now</button>
-  </div>
+    <div class="product-card" onclick="goToProduct('western')">
+      <div class="img-box">
+        <img src="images/western.jpg">
+        <span class="discount">10% OFF</span>
+      </div>
+      <p class="desc">Summer Collection for Men</p>
+      <p class="rating">⭐ 4.1 | 6,500 ratings</p>
+      <p>
+        <del>₹999</del>
+        <span class="final">₹899</span>
+      </p>
+      <p class="save">You save ₹100</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
 
-  <div class="product-card">
-    <img src="images/sneakers.jpg">
-    <p class="desc"><b>Women Casual Sneakers</b></p>
-    <p><del>₹4999</del> ₹3599</p>
-    <button class="price">Buy Now</button>
-  </div>
+    <div class="product-card" onclick="goToProduct('sneakers')">
+      <div class="img-box">
+        <img src="images/sneakers.jpg">
+        <span class="discount">28% OFF</span>
+      </div>
+      <p class="desc">Women Casual Sneakers</p>
+      <p class="rating">⭐ 4.4 | 19,800 ratings</p>
+      <p>
+        <del>₹4,999</del>
+        <span class="final">₹3,599</span>
+      </p>
+      <p class="save">You save ₹1,400</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
 
-  <div class="product-card">
-    <img src="images/jewelry.jpg">
-    <p class="desc"><b>Cz Diamond Bridal Jewellery Sets</b></p>
-    <p><del>9999</del> ₹8999</p>
-    <button class="price">Buy Now</button>
-  </div>
+    <div class="product-card" onclick="goToProduct('jewelry')">
+      <div class="img-box">
+        <img src="images/jewelry.jpg">
+        <span class="discount">10% OFF</span>
+      </div>
+      <p class="desc">CZ Diamond Bridal Jewellery Sets</p>
+      <p class="rating">⭐ 4.5 | 5,600 ratings</p>
+      <p>
+        <del>₹9,999</del>
+        <span class="final">₹8,999</span>
+      </p>
+      <p class="save">You save ₹1,000</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
 
-  <div class="product-card">
-    <img src="images/makeup.jpg">
-    <p class="desc"><b>Volo Makeup Kit for Woman</b></p>
-    <p><del>₹4459</del> ₹3999</p>
-    <button class="price">Buy Now</button>
+    <div class="product-card" onclick="goToProduct('makeup')">
+      <div class="img-box">
+        <img src="images/makeup.jpg">
+        <span class="discount">10% OFF</span>
+      </div>
+      <p class="desc">Volo Makeup Kit for Women</p>
+      <p class="rating">⭐ 4.2 | 7,300 ratings</p>
+      <p>
+        <del>₹4,459</del>
+        <span class="final">₹3,999</span>
+      </p>
+      <p class="save">You save ₹460</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
   </div>
-  
-</div>
+  <script>function goToProduct(product) {
+      window.location.href = "product.html?item=" + product;
+    }
+    function goHome() {
+      window.location.href = "index.html";
+    }</script>
+</body>
+
+</html>

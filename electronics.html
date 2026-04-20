@@ -1,86 +1,189 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Electronics</title>
   <link rel="stylesheet" href="shopify.css">
 </head>
+
 <body>
-<h1 class="title">Electronics</h1>
-
-<div class="products">
-
-  <div class="product-card">
-    <img src="images/phone.jpg">
-    <p class="desc"><b> Smartphone With High-Speed Processor and Great Camera.</b></p>
-    <p><del>₹199,990</del> ₹137,999</p>
-    <button class="price">Buy Now</button>
+  <div class="home-container">
+    <button onclick="goHome()" class="home-btn">← Home</button>
   </div>
+  <h1 class="title">Electronics</h1>
 
-  <div class="product-card">
-    <img src="images/laptop.jpg">
-    <p class="desc"><b>HP 15 Laptop, Intel (14th Gen) Core 5 120U (24GB DDR5, 512GB SSD)</b></p>
-    <p><del>₹55,999</del> ₹49,799</p>
-    <button class="price">Buy Now</button>
-  </div>
+  <div class="products">
 
-  <div class="product-card">
-    <img src="images/headphones.jpg">
-    <p class="desc"><b>Sony WH-CH720N Active Noise Cancellation Wireless Headphones</b></p>
-    <p><del>₹9999</del> ₹7799</p>
-    <button class="price">Buy Now</button>
-  </div>
+    <div class="product-card" onclick="goToProduct('phone')">
+      <div class="img-box">
+        <img src="images/phone.jpg">
+        <span class="discount">31% OFF</span>
+      </div>
+      <p class="desc">
+        Smartphone With High-Speed Processor and Great Camera
+      </p>
+      <p class="rating">⭐ 4.3 | 12,345 ratings</p>
+      <p>
+        <del>₹199,990</del>
+        <span class="final">₹137,999</span>
+      </p>
+      <p class="save">You save ₹61,991</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
 
-  <div class="product-card">
-    <img src="images/tv.jpg">
-    <p class="desc"><b>Philips 108 cm (43 inches) 6100 Series Smart Tv</b></p>
-    <p><del>₹23,899</del> ₹19,999</p>
-    <button class="price">Buy Now</button>
-  </div>
+    <div class="product-card" onclick="goToProduct('laptop')">
+      <div class="img-box">
+        <img src="images/laptop.jpg">
+        <span class="discount">10% OFF</span>
+      </div>
+      <p class="desc">HP 15 Laptop, Intel (14th Gen) Core 5 120U (24GB DDR5, 512GB SSD)</p>
+      <p class="rating">⭐ 4.0 | 2,345 ratings</p>
+      <p>
+        <del>₹55,999</del>
+        <span class="final">₹49,799</span>
+      </p>
+      <p class="save">You save ₹6200</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
 
-  <div class="product-card">
-    <img src="images/camera.jpg">
-    <p class="desc"><b>Fujifilm X-T5 40MP APS-C X-Trans  high Resolution mirrorless Camera</b></p>
-    <p><del>₹1,80,999</del> ₹1,69,999</p>
-    <button class="price">Buy Now</button>
-  </div>
+    <div class="product-card" onclick="goToProduct('headphones')">
+      <div class="img-box">
+        <img src="images/headphones.jpg">
+        <span class="discount">22% OFF</span>
+      </div>
+      <p class="desc">Sony WH-CH720N Active Noise Cancellation Wireless Headphones</p>
+      <p class="rating">⭐ 4.3 | 15,745 ratings</p>
+      <p>
+        <del>₹9999</del>
+        <span class="final">₹7799</span>
+      </p>
+      <p class="save">You Save 2200</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
 
-  <div class="product-card">
-    <img src="images/speaker.jpg">
-    <p class="desc"><b>Zebronics Zeb-Warrior 2.0 Multimedia Speaker</b></p>
-    <p><del>₹1,999</del> ₹1,599</p>
-    <button class="price">Buy Now</button>
-  </div>
-  
-  <div class="product-card">
-    <img src="images/washingmachine.jpg">
-    <p class="desc"><b>LG Smart Choice Fully-Automatic Front Load Washing Machine</b></p>
-    <p><del>₹30,999</del> ₹27,499</p>
-    <button class="price">Buy Now</button>
-  </div>
+    <div class="product-card" onclick="goToProduct('tv')">
+      <div class="img-box">
+        <img src="images/tv.jpg">
+        <span class="discount">16% OFF</span>
+      </div>
+      <p class="desc">Philips 108 cm (43 inches) 6100 Series Smart Tv</p>
+      <p class="rating">⭐ 4.6 | 20,745 ratings</p>
+      <p>
+        <del>₹23,899</del>
+        <span class="final">₹19,999</span>
+      </p>
+      <p class="save">You save 3900</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
 
-   <div class="product-card">
-    <img src="images/ac.jpg">
-    <p class="desc"><b>Blue Star 1 Ton 5 Star,New Star rated,Smart Inverter Split AC</b></p>
-    <p><del>₹41,999</del> ₹37,999</p>
-    <button class="price">Buy Now</button>
-  </div>
-
-   <div class="product-card">
-    <img src="images/refridge.jpg">
-    <p class="desc"><b>Haier 596L 3Star 2 Door Side by Side Frost Free Refrigerator</b></p>
-    <p><del>₹49,999</del> ₹45,890</p>
-    <button class="price">Buy Now</button>
-  </div>
-
-   <div class="product-card">
-    <img src="images/oven.jpg">
-    <p class="desc"><b>Pigeon Oven Toaster Grill 14 Liters OTG| 900 Watts</b></p>
-    <p><del>₹1,899</del> ₹1,699</p>
-    <button class="price">Buy Now</button>
-  </div>
-
-</div>
+    <div class="product-card" onclick="goToProduct('camera')">
+      <div class="img-box">
+        <img src="images/camera.jpg">
+        <span class="discount">6.1% OFF</span>
+      </div>
+      <p class="desc">Fujifilm X-T5 40MP APS-C X-Trans High Resolution Mirrorless Camera</p>
+      <p class="rating">⭐ 4.7 | 8,245 ratings</p>
+      <p>
+        <del>₹1,80,999</del>
+        <span class="final">₹1,69,999</span>
+      </p>
+      <p class="save">You save ₹11,000</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
 
 
+    <div class="product-card" onclick="goToProduct('speaker')">
+      <div class="img-box">
+        <img src="images/speaker.jpg">
+        <span class="discount">20% OFF</span>
+      </div>
+      <p class="desc">Zebronics Zeb-Warrior 2.0 Multimedia Speaker</p>
+      <p class="rating">⭐ 4.2 | 5,120 ratings</p>
+      <p>
+        <del>₹1,999</del>
+        <span class="final">₹1,599</span>
+      </p>
+      <p class="save">You save ₹400</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('washingmachine')">
+      <div class="img-box">
+        <img src="images/washingmachine.jpg">
+        <span class="discount">11.3% OFF</span>
+      </div>
+      <p class="desc">LG Smart Choice Fully-Automatic Front Load Washing Machine</p>
+      <p class="rating">⭐ 4.5 | 18,600 ratings</p>
+      <p>
+        <del>₹30,999</del>
+        <span class="final">₹27,499</span>
+      </p>
+      <p class="save">You save ₹3,500</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('ac')">
+      <div class="img-box">
+        <img src="images/ac.jpg">
+        <span class="discount">9.5% OFF</span>
+      </div>
+      <p class="desc">Blue Star 1 Ton 5 Star Smart Inverter Split AC</p>
+      <p class="rating">⭐ 4.4 | 10,980 ratings</p>
+      <p>
+        <del>₹41,999</del>
+        <span class="final">₹37,999</span>
+      </p>
+      <p class="save">You save ₹4,000</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('fridge')">
+      <div class="img-box">
+        <img src="images/refridge.jpg">
+        <span class="discount">8.2% OFF</span>
+      </div>
+      <p class="desc">Haier 596L 3Star Side by Side Frost Free Refrigerator</p>
+      <p class="rating">⭐ 4.3 | 7,890 ratings</p>
+      <p>
+        <del>₹49,999</del>
+        <span class="final">₹45,890</span>
+      </p>
+      <p class="save">You save ₹4,109</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card" onclick="goToProduct('oven')">
+      <div class="img-box">
+        <img src="images/oven.jpg">
+        <span class="discount">10.5% OFF</span>
+      </div>
+      <p class="desc">Pigeon Oven Toaster Grill 14 Liters OTG | 900 Watts</p>
+      <p class="rating">⭐ 4.1 | 3,540 ratings</p>
+      <p>
+        <del>₹1,899</del>
+        <span class="final">₹1,699</span>
+      </p>
+      <p class="save">You save ₹200</p>
+      <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
+    </div>
+    <script>
+      function goToProduct(product) {
+        window.location.href = "product.html?item=" + product;
+      }
+      function goHome() {
+        window.location.href = "index.html";
+      }
+    </script>
 </body>
+
 </html>
