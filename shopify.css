@@ -284,6 +284,7 @@ footer .col {
 
 footer .logo {
   margin-bottom: 30px;
+   filter: invert(1);
 }
 
 footer h4 {
@@ -471,6 +472,7 @@ footer .copyright {
   cursor: pointer;
   margin-bottom: 10px;
   display: block;
+  margin-left: 25px;
 }
 
 .buy {
